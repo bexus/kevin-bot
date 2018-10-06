@@ -12,6 +12,14 @@ moment = require("moment")
 
 module.exports = (robot) ->
   cronjob = new cronJob(
+    cronTime: "0 0 9 * * 0"
+    start: true
+    timeZone: "Asia/Tokyo"
+    onTick: ->
+      robot.send {room: CHANNEL.database}, "@channel レビューシート締切日だけど、まだ出してないやつなんておる？ちな期限外提出は100点★減点★らしいぞ"
+  )
+
+  cronjob = new cronJob(
     cronTime: "0 40 10 * * 1" #月曜2限
     start: true
     timeZone: "Asia/Tokyo"
