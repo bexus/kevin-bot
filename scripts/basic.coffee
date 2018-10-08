@@ -22,3 +22,6 @@ module.exports = (robot) ->
   robot.leave (res) ->
     res.send res.random leaveReplies
 
+  robot.hear /.*やねん/i, (msg) ->
+    msg.send "ふいたw"
+
