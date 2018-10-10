@@ -10,7 +10,8 @@ module.exports = (robot) ->
     room = res.message.user.room
     robot.send {room: room}, 'ちょっと何言ってるかわかんない'
 
-  robot.respond /say (.*) (.*)/i, (res) ->
+  robot.respond /say (#.+?)\s([\s\S]*)$/i, (res) ->
+    console.log(res.match)
     channel = res.match[1]
     msg = res.match[2]
     robot.send {room: channel}, msg
@@ -25,3 +26,5 @@ module.exports = (robot) ->
   robot.hear /.*やねん/i, (msg) ->
     msg.send "ふいたw"
 
+  robot.hear /けびん/i, (msg) ->
+    msg.send "すこ:heart:"
