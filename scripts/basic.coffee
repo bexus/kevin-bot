@@ -26,5 +26,5 @@ module.exports = (robot) ->
   robot.hear /.*やねん/i, (msg) ->
     msg.send "ふいたw"
 
-  robot.hear /けびん/i, (msg) ->
+  robot.hear /^けびん$/i, (msg) ->
     msg.send "すこ:heart:"
