@@ -6,3 +6,4 @@ module.exports =
     proC: 'CC0HVETDY'
     proLang: 'CC0MXBX3P'
     archB: 'CC1T7TRFG'
+    forecast: 'CEGV9RYUF'
